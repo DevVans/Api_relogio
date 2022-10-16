@@ -22,7 +22,7 @@ app.get('/vin1/rest/clock/:hora' ,(req, res) =>{
 //caso seja verdadeiro
     if(querieFound){
         var angulo = querieFound['angle']
-    } else { 
+    }else{ 
         angulo = "buscar no DB"
         //comando para conectar
         //comando para achar
