@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-//const queries = require('./src/data/queries.json')
+const queries = require('./src/data/queries.json')
 
 
 //rota para ler o json
@@ -12,7 +12,7 @@ app.get('/', (req, res)=>{
 
 //rota caso informe somente a hora
 
-app.get('/vin1/rest/clock/:hora' ,(req, res) =>{
+app.get('/vin1/rest/clock/:hour' ,(req, res) =>{
     let hour = req.params.hour
     let minutes = "0"
     let tempo = hour+":"+minutes
@@ -33,7 +33,7 @@ app.get('/vin1/rest/clock/:hora' ,(req, res) =>{
 
 // rota caso informe hora e minuto
 
-app.get ('/vin1/rest/clock/:hora/minutes' ,(req, res) =>{
+app.get ('/vin1/rest/clock/:hour/minutes' ,(req, res) =>{
     let hour = req.params.hour
     let minutes = req.params.minutes
     let tempo = hour+":"+minutes
